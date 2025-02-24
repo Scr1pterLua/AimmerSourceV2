@@ -23,6 +23,7 @@ local SoundV4 = Instance.new("Sound")
 SoundV4.SoundId = "rbxassetid://18202483174"
 SoundV4.Parent = game.SoundService
 SoundV4.Name = "sounduiiiii"
+
 -- Services
 local UserInputService = game:GetService("UserInputService")
 
@@ -59,12 +60,12 @@ function library:CreateWindow(name, version, icon, plr)
 	end
 	local function playSoundWithRandomization(sound)
 		-- Randomize speed (between 0.5 and 1.5)
-		local randomSpeed = math.random() * (1.5 - 0.5) + 0.5
+		local randomSpeed = math.random() * (0.5 - 0.2) + 0.5
 		sound.Pitch = randomSpeed
 
 		-- Randomize volume (between 0.5 and 1.5)
-		local randomVolume = math.random() * (1.5 - 0.5) + 0.5
-		sound.Volume = randomVolume
+		
+		sound.Volume = 0.6
 
 		-- Play the sound
 		sound:Play()
